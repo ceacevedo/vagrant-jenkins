@@ -32,10 +32,11 @@ sudo cp /vagrant/VirtualHost/jenkins /etc/nginx/sites-available/
 sudo ln -s /etc/nginx/sites-available/jenkins /etc/nginx/sites-enabled/
 sudo service nginx restart
 sudo service jenkins restart
-echo "Success"
 
 ########################
 # The first password of jenkins
 ########################
 echo "Use this password to start jenkins"
+sleep 30
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+echo "ALL SUCCESS"
