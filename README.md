@@ -13,20 +13,24 @@ Build the vagrant box
 vagrant up
 ```
 
-To access the Jenkins server
+Once your VM has booted and finished provisioning the Jenkins container, ssh into your VM by running:
 
 ```
-http://localhost:9005
+vagrant ssh
 ```
 
-or, add the following line to the hosts file
+and then run the next command in order to obtain the password that Jenkins provided to continue the installation on the browser.
 
 ```
-127.0.0.1   jenkins.local
+docker logs jenkins 
 ```
 
-and then run the server with
+Copy the password, open your browser and browse:
 
 ```
-http://jenkins.local:9005
+http://localhost:8080
 ```
+
+Continue with the installation proccess...
+
+
